@@ -5,6 +5,7 @@ export default function Guitar ({guitar, setCart}) {
 
   const handleClick = (guitar) => {
     setCart(guitar)
+
   }
 
   return (
