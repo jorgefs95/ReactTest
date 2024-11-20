@@ -1,7 +1,10 @@
-export default function Guitar ({guitar}) {
+import { useState } from "react";
+
+export default function Guitar ({guitar, setCart}) {
   const { id, name, image, description, price } = guitar;
 
-  const handleClick = () => {
+  const handleClick = (guitar) => {
+    setCart(guitar)
 
   }
 
@@ -17,7 +20,7 @@ export default function Guitar ({guitar}) {
         <button
           type="button"
           className="btn btn-dark w-100"
-          onClick={handleClick}
+          onClick={() => handleClick(id)}
         >
           Agregar al Carrito
         </button>
